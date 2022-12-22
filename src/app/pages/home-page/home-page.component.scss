@@ -1,0 +1,394 @@
+:host {
+    --text-color: #19202d;
+    --light-text-color: #6e8098;
+    --app-bg-color: #f2f2f2;
+    --filters-bg-color: #fff;
+    --checkbox-bg-color: #e7e8e9;
+    --placeholder-color: #8c8f96;
+    --button-light-bg-color: #eeeffc;
+    --button-light-bg-color-hvr: #c5c9f4;
+    --button-light-color: #5964e0;
+}
+
+.overlay{
+    position: absolute;
+    width: 100vw;
+    height: 130vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 100000;
+    top: 0;
+    display: none;
+}
+.filter-popUp{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    background-color: white;
+    padding: 30px 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    border-radius: 8px;
+    i{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        color: var(--button-light-color);
+        font-size: 1.1rem;
+    }
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 30px;
+        .select-div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-bottom: 2px solid gainsboro;
+            padding-bottom: 20px;
+            input{
+                all: unset;
+                width: 70%;
+            }
+        }
+
+        .check-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            button{
+                all: unset;
+                background-color: var(--button-light-color);
+                color: white;
+                font-size: 700;
+                border-radius: 5px;
+                width: 100%;
+                height: 40px;
+                text-align: center;
+            }
+
+            label{
+                input{
+                    display: none;
+                }
+
+                span{
+                    position: relative;
+                    cursor: pointer;
+                    font-weight: 700;
+                    &::before{
+                        content: '';
+                        display:inline-block;
+                        background-color: rgba(220, 220, 220, 0.698);
+                        border-radius: 3px;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        position: absolute;
+                        top: 50%;
+                        left: -40px;
+                        transform: translateY(-50%);
+                    }
+
+                    &::after{
+                        content: '\2713';
+                        position: absolute;
+                        display:inline-block;
+                        background-color: var(--button-light-color);
+                        border-radius: 3px;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        top: 50%;
+                        left: -40px;
+                        transform: translateY(-50%);
+                        text-align: center;
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        color: white;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+main{
+    .container{
+        .row{
+            width: 100%;
+            .filters{
+                position: relative;
+                bottom: 50px;
+                .wrapper{
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    background-color: white;
+                    padding: 0 30px;
+                    .input-div{
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        flex: 1;
+                        position: relative;
+                        input{
+                            all: unset;
+                            width: 100%;
+                            padding:35px 30px;
+                        }
+
+                        &::after{
+                            content: '';
+                            width: 2px;
+                            height: 100%;
+                            background-color: rgba(220, 220, 220, 0.472);
+                            position: absolute;
+                            right: 15px;
+                        }
+                    }
+                    .select-div{
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        column-gap: 20px;
+                        flex: .7;
+                        position: relative;
+
+                        padding: 0 30px;
+                        &::after{
+                            content: '';
+                            width: 2px;
+                            height: 321%;
+                            background-color: rgba(220, 220, 220, 0.472);
+                            position: absolute;
+                            right: 70px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        input{
+                            all: unset;
+                            color: gray;
+                        }
+                    }
+                    .check-div{
+                        cursor: pointer;
+                        flex: .5;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        label{
+                            input{
+                                display: none;
+                            }
+
+                            span{
+                                position: relative;
+                                cursor: pointer;
+                                &::before{
+                                    content: '';
+                                    display:inline-block;
+                                    background-color: rgba(220, 220, 220, 0.698);
+                                    border-radius: 3px;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -40px;
+                                    transform: translateY(-50%);
+                                }
+
+                                &::after{
+                                    content: '\2713';
+                                    position: absolute;
+                                    display:inline-block;
+                                    background-color: var(--button-light-color);
+                                    border-radius: 3px;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    top: 50%;
+                                    left: -40px;
+                                    transform: translateY(-50%);
+                                    text-align: center;
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                    color: white;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        button{
+                            all: unset;
+                            padding: 13px 25px;
+                            background-color: var(--button-light-color);
+                            color: white;
+                            font-size: 700;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+
+
+            .job-cards{
+                .job-wrapper{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 60px 20px;
+                    justify-content: center;
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: white;
+                        padding: 40px 30px;
+                        border-radius: 5px;
+                        row-gap: 20px;
+                        position: relative;
+                        width: calc(33.33333% - 20px);
+                        cursor: pointer;
+                        &:hover{
+                            .position{
+                                color: var(--light-text-color) !important;
+                            }
+                        }
+                        .card-header{
+                            width: fit-content;
+                            position: absolute;
+                            top: -25px;
+                            figure{
+                                padding: 15px 5px;
+                                border-radius: 15px;
+                            }
+                        }
+                        .card-body{
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 9px;
+                            margin-top: 10px;
+                            .sub-info{
+                                span{
+                                    color:var(--light-text-color);
+                                    font-weight: 400;
+                                }
+                            }
+                            .position{
+                                color: var(--text-color);
+                                transition: .2s;
+                            }
+                            .name{
+                                color:var(--light-text-color);
+                                font-weight: 400;
+                            }
+                        }
+                        .bottom{
+                            font-weight: 700;
+                            color: var(--button-light-color);
+                            margin-top: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.tag.active{
+    &::after{
+        content: '\2713';
+        position: absolute;
+        display:inline-block;
+        background-color: var(--button-light-color);
+        border-radius: 3px;
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 50%;
+        left: -40px;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: white;
+        opacity:1 !important;
+    }
+}
+
+.filter-popUp.active{
+    display: block !important;
+    z-index: 100000000000000000;
+}
+.overlay.active{
+    display: block !important;
+
+}
+@media only screen and (max-width:892px) {
+    .filters{
+        .input-div{
+            &::after{
+                display: none !important;
+            }
+
+            .filter{
+                display: block !important;
+            }
+        }
+        .select-div{
+            display: none !important;
+        }
+        .check-div{
+            display: none !important;
+        }
+    }
+
+    .job-cards{
+        .job-wrapper{
+            .card{
+                width: 45% !important;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:490px) {
+    .filter-popUp{
+        .form-group{
+            .check-div{
+                label{
+                  span{
+                      &::before{
+                         left: -24px;
+                         width: 1.2rem;
+                         height: 1.2rem;
+                      }
+
+                      &::after{
+                        left: -24px;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        font-size: .9rem;
+                      }
+                  }
+                }
+              }
+        }
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .job-cards{
+        .job-wrapper{
+            .card{
+                width: 100% !important;
+            }
+        }
+    }
+}

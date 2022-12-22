@@ -1,0 +1,56 @@
+:host{
+    --text-color: #19202d;
+    --light-text-color: #6e8098;
+    --app-bg-color: #f2f2f2;
+    --filters-bg-color: #fff;
+    --checkbox-bg-color: #e7e8e9;
+    --placeholder-color: #8c8f96;
+    --button-light-bg-color: #eeeffc;
+    --button-light-bg-color-hvr: #c5c9f4;
+    --button-light-color: #5964e0;
+}
+
+.header{
+    background-image: url(	https://devjobs-web-app-5toyf4pub-david-maillard.vercel.app/img/bg-pattern-header.549c5470.svg);
+    min-height: 10.125rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    .container{
+        .wrapper{
+            margin-bottom: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            .dark-mode{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                column-gap: 10px;
+                .switcher{
+                    width: 3rem;
+                    height: 1.5rem;
+                    background-color: var(--button-light-bg-color);
+                    border-radius: 30px;
+                    position: relative;
+                    cursor: pointer;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        left: 5px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: .9rem;
+                        height: .9rem;
+                        border-radius: 100%;
+                        background-color: var(--button-light-color);
+                    }
+                }
+            }
+        }
+    }
+}
