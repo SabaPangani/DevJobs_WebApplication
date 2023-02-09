@@ -1,6 +1,6 @@
 # DevJobsApp
-##Live url https://sabapangani.github.io/DevJobs_WebApplication/
-##Need to fix logo bug
+Live url https://sabapangani.github.io/DevJobs_WebApplication/
+Need to fix logo bug
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## Development server
