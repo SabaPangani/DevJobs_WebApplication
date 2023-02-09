@@ -1,6 +1,6 @@
 # DevJobsApp
 Live url https://sabapangani.github.io/DevJobs_WebApplication/
-Need to fix logo bug
+Need to fix logo bug || need to add dark mode
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## Development server
