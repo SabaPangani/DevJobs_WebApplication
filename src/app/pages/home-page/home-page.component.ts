@@ -18,52 +18,7 @@ export class HomePageComponent {
   
    locations = "Filter By Location,Germany,Japan,New Zealand,Russia,Singapore,United Kingdom,United States";
    locationsArr = this.locations.split(',');
-
-  //  filterByRegion(location:any){
-  //   console.log(this.locationsArr);
-  //   console.log(location.value);
-    
-  //   this.filteredJobs = this.jobsArr.filter((job:any) =>{
-  //     return location.value === job.location;
-  //   })
-  //   if (location.value === "Filter By Location"){
-  //     return this.filteredJobs = this._getJob.getJobs();
-  //   }
-  //  }
-
-  // Search(value:any){
-  //   const str2 = value.charAt(0).toUpperCase() + value.slice(1);
-  //   console.log(str2);
-  //   console.log(value);
-
-  //   this.filteredJobs = this.jobsArr.filter((job:any) =>{
-  //     return str2 === job.company;
-  //   })
-
-  // }
-
-  // checkSearch(input:any){
-  //   if(input.length <= 0){
-  //     return this.filteredJobs = this._getJob.getJobs();
-  //   }
-  // }
-  // checkContract(){
-  //   const checkBoxBtn = document.querySelector(".checkBtn") as HTMLInputElement;
-  //   const tag = document.querySelector(".tag") as HTMLSpanElement;
-
-  //   tag.classList.toggle("active");
-  //   if (checkBoxBtn.checked == true){
-  //     this.filteredJobs = this.jobsArr.filter((job:any) =>{
-  //       return "Full Time" === job.contract;
-  //     })
-  //   }else{
-  //     return this.filteredJobs = this._getJob.getJobs();
-  //   }
-  // }
-
-  // ngOnInit(){
-  //   const main = document.querySelector("main");
-  // }
+   
    main = document.querySelector("main") as HTMLElement;
 
    filterJobs(){
